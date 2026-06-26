@@ -1,26 +1,31 @@
-num1= int(input("Enter a number: "))
-num2= int(input(("Enter another number: ")))
+operation= input("Choose an operation: "
+"\n use '+' as sum" 
+"\n use '-' as sub" \
+"\n use '*' as multiply" \
+"\n use '/' as divide \n")
 
-def add(num1 , num2):
-    return num1 + num2
+a= int(input("Enter an number:"))
+b= int(input("Enter an number:"))
 
-sum_result= add(num1,num2)
-print(f'Result: {sum_result}')
+def add(a,b):
+    return a+b
 
-def subtract(num1, num2):
-    return num1 - num2
+def subtract(a,b):
+    return a-b
 
-subtract_result= subtract(num1, num2)
-print(f'Result: {subtract_result}')
+def multiply(a,b):
+    return a*b
 
-def multiply(num1, num2):
-    return num1 * num2
+def divide(a,b):
+    return a/b
 
-multiply_result= multiply(num1, num2)
-print(f'Result: {multiply_result}')
-
-def divide(num1, num2):
-    return num1/num2
-
-divide_result= divide(num1, num2)
-print(f'Result: {divide_result}')
+if operation == "+":
+    print(add(a,b))
+elif operation == "-":
+    print(subtract(a,b))
+elif operation == "*":
+    print(multiply(a,b))
+elif operation == "/":
+    print(divide(a,b))
+else:
+    print("Invalid choice")
